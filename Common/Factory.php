@@ -14,4 +14,16 @@ class Factory
         return $db;
     }
 
+    static function createUser($id)
+    {
+        $user = Register::get('user_'.$id);
+        if (!$user) {
+            $user = new User($id);
+            Register::set('user_'.$id, $user);
+        }
+
+        return $user;
+
+    }
+
 }
