@@ -3,7 +3,7 @@
 
 namespace Common;
 
-//注册器
+//注册器模式
 class Register
 {
 

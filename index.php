@@ -11,6 +11,18 @@ define('BASEDIR', __DIR__);
 include BASEDIR.'/Common/Loader.php';
 spl_autoload_register('\\Common\\Loader::autoload');
 
+
+
+
+
+
+
+
+
+
+
+
+
 //适配器模式
 //$db = new Database\PDO();
 //$db2 = new Database\Mysqli();
@@ -23,13 +35,6 @@ spl_autoload_register('\\Common\\Loader::autoload');
 //$db = Database::getInstance();
 //$db = Database::getInstance();
 //$db = Database::getInstance();
-
-
-
-
-
-
-
 
 
 //$suzu = new Suzu();
