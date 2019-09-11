@@ -10,6 +10,7 @@ class User
     public $name;
     public $phone;
 
+    //数据对象映射模式 ORM
     function __construct($id)
     {
         $conn = mysqli_connect('127.0.0.1', 'root', '', 'test', '3310');

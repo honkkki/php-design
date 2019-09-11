@@ -37,10 +37,8 @@ class Observer2 implements Observer
     }
 }
 
-
-
+//代码解耦 监听事件的设计原理 观察者模式
 $event = new Event();
-
 $event->addObserver(new Observer1());
 $event->addObserver(new Observer2());
 $event->trigger();
