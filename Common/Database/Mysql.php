@@ -10,7 +10,6 @@ class Mysql implements IDatabase
     {
         $this->conn = mysql_connect($host, $user, $pwd);
         mysql_select_db($dbname, $this->conn);
-
     }
 
     public function query($sql)

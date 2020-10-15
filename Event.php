@@ -10,13 +10,12 @@ include BASEDIR.'/Common/Loader.php';
 spl_autoload_register('\\Common\\Loader::autoload');
 
 
-
 class Event extends EventGenerator
 {
     function trigger()
     {
         echo "事件发生".PHP_EOL;
-        //事件发生通知观察者
+        // 事件发生通知观察者
         $this->notify();
     }
 

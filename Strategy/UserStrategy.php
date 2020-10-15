@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Common;
+namespace Strategy;
 
-//策略接口
+// 策略接口
 interface UserStrategy
 {
     function showAd();

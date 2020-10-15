@@ -5,12 +5,31 @@ use Common\IDatabase;
 
 class Mysqli implements IDatabase
 {
+    private static $instance;
+    private $conn;
 
-    protected $conn;
+    private function __construct()
+    {
+    }
+
+    private function __clone()
+    {
+    }
+
     public function connect($host, $user, $pwd, $dbname)
     {
         $conn = mysqli_connect($host, $user, $pwd, $dbname);
         $this->conn = $conn;
+    }
+
+    public static function mysqliInstance()
+    {
+        if (self::$instance) {
+            return self::$instance;
+        }
+
+        self::$instance = new self();
+        return self::$instance;
     }
 
     public function query($sql)

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Common;
+namespace Strategy;
 
 
 class FemaleUserStrategy implements UserStrategy
@@ -17,3 +17,4 @@ class FemaleUserStrategy implements UserStrategy
     }
 
 }
+

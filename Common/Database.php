@@ -1,23 +1,18 @@
 <?php
 
-
 namespace Common;
-
-//适配器接口
-interface IDatabase
-{
-    function connect($host, $user, $pwd, $dbname);
-    function query($sql);
-    function close();
-}
 
 class Database
 {
     //单例模式连接数据库
-    protected static $db;
+    private static $db;
+    public $info = '获取数据库实例成功';
     private function __construct()
     {
+    }
 
+    private function __clone()
+    {
     }
 
     static function getInstance()
@@ -25,6 +20,7 @@ class Database
         if (self::$db) {
             return self::$db;
         }
+
         self::$db = new self();
         return self::$db;
     }

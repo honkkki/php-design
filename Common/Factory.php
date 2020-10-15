@@ -10,7 +10,7 @@ class Factory
         //return $db;
         //工厂模式+单例模式
         $db = Database::getInstance();
-        Register::set('db1', $db);
+        Register::set('db', $db);
         return $db;
     }
 
@@ -23,7 +23,14 @@ class Factory
         }
 
         return $user;
+    }
 
+    static function createMysqliConn()
+    {
+        // 连接mysql数据库
+        $mysqli = Database\Mysqli::mysqliInstance();
+        $mysqli->connect('127.0.0.1', 'root', '111111', 'test');
+        Register::set('mysql', $mysqli);
     }
 
 }

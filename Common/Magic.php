@@ -1,7 +1,7 @@
 <?php
 namespace Common;
 
-class Suzu
+class Magic
 {
     protected $array = [];
 
@@ -28,10 +28,10 @@ class Suzu
     }
 
     //对象实例可以当做方法使用
-    function __invoke($param)
+    function __invoke($param1, $param2)
     {
-        var_dump($param);
-        return 111;
+        var_dump($param1, $param2);
+        return true;
     }
 
     static function test()

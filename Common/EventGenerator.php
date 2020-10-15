@@ -11,7 +11,6 @@ abstract class EventGenerator
     function addObserver(Observer $observer)
     {
         $this->observers[] = $observer;
-
     }
 
     function notify()
