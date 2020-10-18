@@ -3,7 +3,7 @@
 
 namespace Common;
 
-//事件抽象类
+// 事件通知抽象类
 abstract class EventGenerator
 {
     private $observers = [];
@@ -13,10 +13,10 @@ abstract class EventGenerator
         $this->observers[] = $observer;
     }
 
-    function notify()
+    function notify($param = null)
     {
         foreach ($this->observers as $observer) {
-            $observer->update();
+            $observer->update($param);
         }
     }
 

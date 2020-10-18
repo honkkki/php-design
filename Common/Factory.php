@@ -4,7 +4,7 @@ namespace Common;
 
 class Factory
 {
-    static function createDatabase()
+    static function createDatabase($type = null)
     {
         //$db = new Database();
         //return $db;
